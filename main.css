@@ -9,6 +9,10 @@ a, a:visited, a:active {
     text-decoration: none;
 }
 
+i:hover {
+    color: #000000;
+}
+
 .main-wrapper {
     display: flex;
     justify-content: space-between;
