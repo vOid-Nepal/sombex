@@ -9,10 +9,6 @@ a, a:visited, a:active {
     text-decoration: none;
 }
 
-i:hover {
-    color: #000000;
-}
-
 .main-wrapper {
     display: flex;
     justify-content: space-between;
@@ -86,4 +82,11 @@ span {
     color: #000000;
     font-size: 0.6rem;
     line-height: 0.5;
+}
+
+.social a {
+transition:0.6ms;
+}
+.social a:hover {
+    color: #000000;
 }
