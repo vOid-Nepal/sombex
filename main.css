@@ -1,0 +1,85 @@
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: goldenrod
+}
+
+a, a:visited, a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.first {
+    height: 100vh;
+    background-color: firebrick;
+    width: 45%;
+    transform: skewX(-10deg);
+    position: relative;
+    left: -3.6rem;
+    font-size: 1.2rem;
+}
+
+.first .coming-soon {
+    color: aliceblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ .coming-soon p {
+     padding: 4rem;
+ }
+.second {
+    width: 55%;
+    background-color: goldenrod;
+}
+
+.blog-container {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.post-item {
+    width: 20%;
+    margin: 1.2rem 0;
+    transition: 1s filter linear, 1s -webkit-filter linear;
+
+}
+
+.post-item:hover {
+    filter: brightness(50%);
+}
+
+
+.post-item img {
+    width: 100%;
+}
+
+.post-item:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.post-item img, .post-item h6 {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+span {
+    color: #000000;
+    font-size: 0.6rem;
+    line-height: 0.5;
+}

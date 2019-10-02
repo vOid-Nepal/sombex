@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="main.css">
+    <title>Title</title>
+</head>
+<body>
+
+    <main class="main-wrapper">
+        <section class="first">
+            <div class="coming-soon">
+                <img src="https://1.bp.blogspot.com/-uzk6mggOlyg/Wfv2avQd_4I/AAAAAAAAAVU/fSSR7tiGicYqdtRXon9-wlvSIL0tTNycgCK4BGAYYCw/s1600/sombex.png" alt="main-logo">
+                <p>We will be live soon. Meanwhile you can checkout our blog.</p>
+            </div></section>
+        <section class="second">
+            <div>
+            <div class="blog-container">
+                <div class="post-item"><a href="http://blog.sombex.com">Visit Our Blog </a></div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+<script>
+	// debugger;
+	// document.body.innerHTML = f();
+    rec = document.getElementsByClassName('blog-container').item(0);
+
+    rec.innerHTML = f() + rec.innerHTML;
+	function f() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "https://www.googleapis.com/blogger/v3/blogs/1842979261561211771/posts?key=AIzaSyD3t4cjcfI4IAFTyvoMid7SeWHxXbQaf1s", false);
+        xhttp.send();
+        str = xhttp.responseText;
+        js = JSON.parse(str);
+
+        if(js['kind'] != "blogger#postList") return;
+        html = '';
+        list = js['items'];
+        for(x in list){
+            if(x > 2) break;
+            html += f1(list[x]);
+		}
+        console.log(html);
+        return html;
+        document.body.innerHTML =html ;
+
+        function f1(item) {
+            
+            if(item['kind'] != "blogger#post") return '';
+            let h = '<div class = "post-item">';
+            let doc = new DOMParser().parseFromString(item['content'], 'text/html');
+            let src = doc.body.getElementsByTagName('img').item(0);
+            // console.log(item);
+            h +=  '<a href = "' + item['url'] + '"> <img alt = "' + src.getAttribute('alt') + '" src="' + src.getAttribute('src') + '">';
+            h += '<h6>' + item["title"] +  '</h6>';
+            h += '<span >' + doc.body.innerText.substr(1, 100) + '</span>';
+//            h.getAttribute('a');
+//			console.log(doc);
+            return h + '</a></div>';
+        }
+    }
+</script>
+</body>
+</html>
