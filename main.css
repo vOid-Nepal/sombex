@@ -85,7 +85,7 @@ span {
 }
 
 .social a {
-transition:0.6ms;
+transition: 1s;
 }
 .social a:hover {
     color: #000000;
