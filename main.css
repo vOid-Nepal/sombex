@@ -39,13 +39,14 @@ a, a:visited, a:active {
  .coming-soon p {
      padding: 4rem;
  }
+
 .second {
     width: 55%;
     background-color: goldenrod;
 }
 
 .blog-container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
