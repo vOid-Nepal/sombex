@@ -1,7 +1,10 @@
+html {
+    scroll-behavior: smooth;
+  }
 body {
     box-sizing: border-box;
     font-size: 16px;
-    background-color: goldenrod
+    background-color: goldenrodb22222
 }
 
 a, a:visited, a:active {
@@ -19,7 +22,7 @@ a, a:visited, a:active {
 
 .first {
     height: 100vh;
-    background-color: firebrick;
+    background-color: #b22222;
     width: 45%;
     transform: skewX(-10deg);
     position: relative;
@@ -103,4 +106,4 @@ span {
     .second {
         width: 100%;
     }
-}
+} 
