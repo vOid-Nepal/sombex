@@ -13,7 +13,7 @@ a, a:visited, a:active {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 100vh;
 }
 
@@ -90,4 +90,16 @@ span {
 }
 .social a:hover {
     color: #000000;
+}
+@media screen and (max-width: 1000px) {
+    .first {
+        width: 100%;
+        left: 0;
+        transform: skew(0deg);
+
+    }
+
+    .second {
+        width: 100%;
+    }
 }
