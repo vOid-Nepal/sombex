@@ -53,6 +53,7 @@ a, a:visited, a:active {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 
 }
 
@@ -106,4 +107,7 @@ span {
     .second {
         width: 100%;
     }
-} 
+
+    .post-item {
+        width: 40%;
+    } 
