@@ -53,12 +53,13 @@ a, a:visited, a:active {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    align-content: space-around;
     flex-wrap: wrap;
 
 }
 
 .post-item {
-    width: 20%;
+    width: 40%;
     margin: 1.2rem 0;
     transition: 1s filter linear, 1s -webkit-filter linear;
 
@@ -108,6 +109,4 @@ span {
         width: 100%;
     }
 
-    .post-item {
-        width: 40%;
-    } 
+} 
